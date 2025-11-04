@@ -101,6 +101,12 @@
 
 // const minutes = Number(prompt('Введіть кількість хвилин'));
 
+// const hours = Math.floor(minutes / 60);
+
+// const normalizedMinutes = minutes % 60;
+
+// console.log(`${hours}:${normalizedMinutes}`);
+
 // TASK 5 --------------------------------------------------------------------------------------------------------------
 
 // Напишіть код, який запитуватиме у користувача
@@ -163,11 +169,13 @@
 //     return 'Not a Number!';
 //   }
 
-//   //   if (a < b) {
-//   //     return a;
-//   //   } else {
-//   //     return b;
-//   //   }
+// if (a < b) {
+//   return a;
+// } else {
+//   return b;
+// }
+
+// return a < b ? a : b;
 
 //   return Math.min(a, b);
 // }
