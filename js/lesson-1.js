@@ -103,9 +103,15 @@
 
 // const hours = Math.floor(minutes / 60);
 
+// // const hours = Number.parseInt(minutes / 60);
+
 // const normalizedMinutes = minutes % 60;
 
-// console.log(`${hours}:${normalizedMinutes}`);
+// const doubleHours = String(hours).padStart(2, 0);
+
+// const doubleMinutes = String(normalizedMinutes).padStart(2, 0);
+
+// console.log(`${doubleHours}:${doubleMinutes}`);
 
 // TASK 5 --------------------------------------------------------------------------------------------------------------
 
@@ -126,11 +132,35 @@
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
 
+// const login = prompt('Введіть логін');
+// console.log(login);
+
+// if (login === 'Адмін') {
+//   const password = prompt('Введіть пароль');
+//   if (password === 'Я головний') {
+//     alert('Добрий день!');
+//   }
+//   if (password !== 'Я головний') {
+//     alert('Невірний пароль!');
+//   }
+// } else if (login === '') {
+//   alert('Скасовано');
+// } else {
+//   alert('Я вас не знаю');
+// }
 // TASK 6 --------------------------------------------------------------------------------------------------------------
 
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+// let number = 0;
+
+// while (number < 20) {
+//   number++;
+
+//   console.log(number);
+// }
 
 // TASK 7 --------------------------------------------------------------------------------------------------------------
 
