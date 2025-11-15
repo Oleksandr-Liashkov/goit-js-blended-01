@@ -13,6 +13,31 @@
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
 
+// const styles = ['jazz', 'blues'];
+
+// styles.push('rock-n-roll');
+
+// const index = styles.indexOf('blues');
+
+// if (index !== -1) {
+//   styles[index] = 'classic';
+// }
+
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+
+//   for (const element of array) {
+//     console.log(element);
+//   }
+// }
+
+// logItems(styles);
+
+// styles.length = 0;
+// console.log('🚀 ~ styles:', styles[0]);
+
 // TASK 2 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -23,9 +48,23 @@
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 
-// const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+// function checkLogin(array) {
+//   const login = prompt('Input name');
+
+//   if (logins.includes(login)) {
+//     alert(`Welcome ${login}`);
+//   } else {
+//     alert('User not found');
+//   }
+
+//   alert(array.includes(login) ? `Welcome ${login}` : 'User not found');
+// }
+
+// checkLogin(logins);
 
 // TASK 3 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -36,6 +75,22 @@
 // Додайте перевірку, що аргументи - це числа.
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+// function caclculateAverage(...args) {
+//   let total = 0;
+//   let count = 0;
+
+//   for (const arg of args) {
+//     if (typeof arg === 'number') {
+//       total += arg;
+//       count++;
+//     }
+//   }
+//   let mean = total / count;
+//   return mean;
+// }
+
+// console.log(caclculateAverage(2, 10, 20, 30, 'string'));
 
 // TASK 4 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -86,14 +141,40 @@
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-// const user = {
-//     name: "John",
-//     age: 20,
-//     hobby: "tenis",
-//     premium: true,
-//   };
+const user = {
+  name: 'John',
+  age: 20,
+  hobby: 'tenis',
+  premium: true,
+};
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+user.mood = 'happy';
+
+user.hobby = 'skydiving';
+
+user.premium = false;
+
+// console.log(user.name);
+
+// console.log(user['name']);
+
+// const key = 'name';
+
+// console.log(user[key]);
+
+// const userKeys = Object.keys(user);
+
+// for (const key of userKeys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+// const arrs = Object.entries(user);
+
+// for (const arr of arrs) {
+//   console.log(`${arr[0]}: ${arr[1]}`);
+// }
 
 // TASK 8 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -104,12 +185,22 @@
 // Якщо об'єкт salaries пустий, то результат має бути 0
 
 // const salaries = {
-//     Mango: 100,
-//     Poly: 160,
-//     Ajax: 1470,
-//   };
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+// const salaryList = Object.values(salaries);
+
+// let sum = 0;
+
+// for (const salary of salaryList) {
+//   sum += salary;
+// }
+
+// console.log(sum);
 
 // TASK 9 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
@@ -125,6 +216,28 @@
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
 
+// const calculator = {
+//   read(a, b) {
+//     this.first = a;
+//     this.second = b;
+//   },
+//   sum() {
+//     if (this.exist()) {
+//       return this.first + this.second;
+//     }
+//     return 'No such propeties';
+//   },
+//   mult() {
+//     if (this.exist()) {
+//       return this.first * this.second;
+//     }
+//     return 'No such propeties';
+//   },
+//   exist() {
+//     return this.first !== undefined && this.second !== undefined;
+//   },
+// };
+
 // TASK 10 --------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -136,13 +249,29 @@
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
 // назвою фрукта, це також треба урахувати.
 
-// const fruits = [
-//     { name: "Яблуко", price: 45, quantity: 7 },
-//     { name: "Апельсин", price: 60, quantity: 4 },
-//     { name: "Банан", price: 125, quantity: 8 },
-//     { name: "Груша", price: 350, quantity: 2 },
-//     { name: "Виноград", price: 440, quantity: 3 },
-//     { name: "Банан", price: 125, quantity: 3 },
-//   ];
+const fruits = [
+  { name: 'Яблуко', price: 45, quantity: 7 },
+  { name: 'Апельсин', price: 60, quantity: 4 },
+  { name: 'Банан', price: 125, quantity: 8 },
+  { name: 'Груша', price: 350, quantity: 2 },
+  { name: 'Виноград', price: 440, quantity: 3 },
+  { name: 'Банан', price: 125, quantity: 3 },
+];
 
 // SOLVING --------------------------------------------------------------------------------------------------------------
+
+function calcTotalPrice(fruits, fruitName) {
+  let total = 0;
+
+  for (const fruit of fruits) {
+    if (fruit.name === fruitName) {
+      let totalFruit = fruit.price * fruit.quantity;
+      total += totalFruit;
+    }
+  }
+  return total;
+}
+
+console.log(calcTotalPrice(fruits, 'Банан'));
+console.log(calcTotalPrice(fruits, 'Апельсин'));
+console.log(calcTotalPrice(fruits, 'Виноград'));
