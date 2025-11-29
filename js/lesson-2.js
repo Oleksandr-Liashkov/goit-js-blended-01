@@ -141,20 +141,20 @@
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-const user = {
-  name: 'John',
-  age: 20,
-  hobby: 'tenis',
-  premium: true,
-};
+// const user = {
+//   name: 'John',
+//   age: 20,
+//   hobby: 'tenis',
+//   premium: true,
+// };
 
-// SOLVING --------------------------------------------------------------------------------------------------------------
+// // SOLVING --------------------------------------------------------------------------------------------------------------
 
-user.mood = 'happy';
+// user.mood = 'happy';
 
-user.hobby = 'skydiving';
+// user.hobby = 'skydiving';
 
-user.premium = false;
+// user.premium = false;
 
 // console.log(user.name);
 
@@ -249,29 +249,29 @@ user.premium = false;
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
 // назвою фрукта, це також треба урахувати.
 
-const fruits = [
-  { name: 'Яблуко', price: 45, quantity: 7 },
-  { name: 'Апельсин', price: 60, quantity: 4 },
-  { name: 'Банан', price: 125, quantity: 8 },
-  { name: 'Груша', price: 350, quantity: 2 },
-  { name: 'Виноград', price: 440, quantity: 3 },
-  { name: 'Банан', price: 125, quantity: 3 },
-];
+// const fruits = [
+//   { name: 'Яблуко', price: 45, quantity: 7 },
+//   { name: 'Апельсин', price: 60, quantity: 4 },
+//   { name: 'Банан', price: 125, quantity: 8 },
+//   { name: 'Груша', price: 350, quantity: 2 },
+//   { name: 'Виноград', price: 440, quantity: 3 },
+//   { name: 'Банан', price: 125, quantity: 3 },
+// ];
 
-// SOLVING --------------------------------------------------------------------------------------------------------------
+// // SOLVING --------------------------------------------------------------------------------------------------------------
 
-function calcTotalPrice(fruits, fruitName) {
-  let total = 0;
+// function calcTotalPrice(fruits, fruitName) {
+//   let total = 0;
 
-  for (const fruit of fruits) {
-    if (fruit.name === fruitName) {
-      let totalFruit = fruit.price * fruit.quantity;
-      total += totalFruit;
-    }
-  }
-  return total;
-}
+//   for (const fruit of fruits) {
+//     if (fruit.name === fruitName) {
+//       let totalFruit = fruit.price * fruit.quantity;
+//       total += totalFruit;
+//     }
+//   }
+//   return total;
+// }
 
-console.log(calcTotalPrice(fruits, 'Банан'));
-console.log(calcTotalPrice(fruits, 'Апельсин'));
-console.log(calcTotalPrice(fruits, 'Виноград'));
+// console.log(calcTotalPrice(fruits, 'Банан'));
+// console.log(calcTotalPrice(fruits, 'Апельсин'));
+// console.log(calcTotalPrice(fruits, 'Виноград'));
