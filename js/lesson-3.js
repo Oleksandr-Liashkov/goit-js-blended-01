@@ -368,9 +368,17 @@
 // const data = [10, 20, 30, 40, 50, 60];
 // const alphData = ['a', 'b', 'c', 'd', 'e'];
 
-// SOLVING --------------------------------------------------------------------------------------------------------------
+// // SOLVING --------------------------------------------------------------------------------------------------------------
 
-// Use reduce method
+// function reverseArray(arr) {
+//   return arr.reduce((acc, item) => {
+//     acc.unshift(item);
+//     return acc;
+//   }, []);
+// }
+
+// console.log(reverseArray(data));
+// console.log(reverseArray(alphData));
 
 // TASK 15 --------------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------------------
@@ -385,6 +393,37 @@
  * - addItem(item) - отримує новий товар і додає його до поточних.
  * - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
  */
+
+// const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
+
+// const items = storage.getItems();
+// console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
+
+// storage.addItem('🍌');
+// console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
+
+// storage.removeItem('🍋');
+// console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
+
+// SOLVING --------------------------------------------------------------------------------------------------------------
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     const itemIndex = this.items.indexOf(item);
+//     if (itemIndex !== -1) {
+//       this.items.splice(itemIndex, 1);
+//     }
+//   }
+// }
 
 // const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 
